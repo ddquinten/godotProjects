@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Score.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Lives.gd" type="Script" id=2]
+
+[node name="GUI" type="Node2D"]
+
+[node name="Score" type="Label" parent="."]
+margin_top = 2.0
+margin_right = 43.0
+margin_bottom = 16.0
+text = "Score: "
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Value" type="Label" parent="Score"]
+anchor_left = -0.0162396
+anchor_right = -0.0162396
+margin_left = 42.6936
+margin_top = 0.698318
+margin_right = 82.6936
+margin_bottom = 14.6983
+text = "0000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lives" type="Label" parent="."]
+margin_left = 570.763
+margin_top = 1.15482
+margin_right = 611.763
+margin_bottom = 15.1548
+text = "Lives: "
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+paddingLength = 1
+
+[node name="Value" type="Label" parent="Lives"]
+anchor_left = -0.0162396
+anchor_right = -0.0162396
+margin_left = 39.3733
+margin_top = 1.27213
+margin_right = 79.3733
+margin_bottom = 15.2721
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
