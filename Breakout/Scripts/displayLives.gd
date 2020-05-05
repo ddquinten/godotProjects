@@ -1,6 +1,6 @@
 extends RichTextLabel
-onready var game_vars = get_node("/root/GlobalVars")
+onready var main = get_node("/root/World")
 
 func printLives():
-	var output = "Lives: " + str(game_vars.lives)
+	var output = "Lives: " + str(main.getLives())
 	set_text(output)

@@ -1,13 +1,36 @@
 extends Node2D
-onready var game_vars = get_node("/root/GlobalVars")
+
+signal game_over
+signal newGame
+
+var ball_count = 0
+var lives = 3
+var MOVE_SPEED = 250
+
+func getLives():
+	return lives
+
+func getBallCount():
+	return ball_count
+	
+func setBallCount(value):
+	ball_count = value
+
+func getSpeed():
+	return MOVE_SPEED
 
 func brickDestory():
 	get_node("GUI/Score").adjust(100)
 
 func loseLife():
-	game_vars.lives -= 1
+	lives -= 1
 	get_node("GUI/Lives").adjust(-1)
 
 func gameOver():
-	print("game over")
-	print("Score: ", get_node("GUI/Score").getScore())
+	emit_signal("game_over")
+
+func init():
+	get_node("GUI/Lives").reset()
+	get_node("GUI/Score").reset()
+	setBallCount(0)
+	emit_signal("newGame")
