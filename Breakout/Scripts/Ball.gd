@@ -9,10 +9,12 @@ func _ready():
 
 func _physics_process(_delta):
 	var bodies = get_colliding_bodies() # reads from the contact monitor setting in Ball
-	
 	for body in bodies:
 		if body.is_in_group("Bricks"):
 			main.brickDestory();
+			main.setBrickCount(main.getBrickCount() - 1)
+			if main.getBrickCount() == 0:
+				main.spawnBricks()
 			body.queue_free() # deletes the brick
 		if body.get_name() == "Paddle":
 			var speed = linear_velocity.length()

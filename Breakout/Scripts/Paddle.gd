@@ -17,13 +17,13 @@ func _ready():
 
 func _physics_process(_delta):
 	velocity.y = get_position().y
-	
-	if Input.is_action_pressed("ui_left"):
-		velocity.x = -main.getSpeed()
-	elif Input.is_action_pressed("ui_right"):
-		velocity.x = main.getSpeed()
-	else:
-		velocity.x = 0
+	if main.getLives() > 0:
+		if Input.is_action_pressed("ui_left"):
+			velocity.x = -main.getSpeed()
+		elif Input.is_action_pressed("ui_right"):
+			velocity.x = main.getSpeed()
+		else:
+			velocity.x = 0
 	move_and_slide(velocity, Vector2(0, 0))
 
 func _input(_event):
