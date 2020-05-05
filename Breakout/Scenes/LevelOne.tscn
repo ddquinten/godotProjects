@@ -129,3 +129,14 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 240.0
+margin_top = 3.0
+margin_right = 405.0
+margin_bottom = 43.0
+text = "Press 'P' or 'Esc' to Pause.
+Press Spacebar to Shoot."
+__meta__ = {
+"_edit_use_anchors_": false
+}
