@@ -1,5 +1,5 @@
 extends Node2D
-
+enum _colors {GREEN, BLUE, RED, YELLOW}
 var rng = RandomNumberGenerator.new()
 
 # Declare member variables here. Examples:
@@ -9,15 +9,22 @@ var rng = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	genSequence()
+	var x = genNum()
+	match (x):
+		_colors.GREEN:
+			print("green")
+		_colors.BLUE:
+			print("blue")
+		_colors.RED:
+			print("red")
+		_colors.YELLOW:
+			print("yellow")
 
 func genNum():
 	rng.randomize()
-	var ran_seq = rng.randi_range(1, 4)
-	print(ran_seq)
+	return rng.randi_range(0, 3)
 
 
 func genSequence():
-	rng.randomize()
-	var ran_seq = rng.randi_range(1, 4)
-	print(ran_seq)
+	pass
+
