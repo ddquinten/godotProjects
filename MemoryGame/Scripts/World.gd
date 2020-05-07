@@ -4,12 +4,6 @@ var rng = RandomNumberGenerator.new()
 var _genSeq = []
 var _guess = []
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	$Blue.connect("_blue", self, "_blue")
 	$Red.connect("_red", self, "_red")
@@ -22,9 +16,9 @@ func genNum():
 	return rng.randi_range(0, 3)
 
 func genSequence():
-	for i in range(0,4):
+	for i in range(0,3):
 		rng.randomize()
-		_genSeq[i] = rng.rndi_range(0,3)
+		_genSeq.append(genNum())
 		print(_genSeq[i])
 
 func _blue():
