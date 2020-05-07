@@ -1,62 +1,28 @@
 [gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/World.gd" type="Script" id=1]
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0, 1, 0.207843, 1 )
-
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0, 0.368627, 0.0745098, 1 )
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0, 1, 0.207843, 1 )
-
-[sub_resource type="GDScript" id=13]
-script/source = "extends Button
-
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-"
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.054902, 0, 1, 1 )
+[ext_resource path="res://Scripts/Blue.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Yellow.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Green.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Red.gd" type="Script" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.0313726, 0, 0.603922, 1 )
+bg_color = Color( 0, 1, 0.207843, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0.368627, 0.0745098, 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0, 1, 0.207843, 1 )
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.054902, 0, 1, 1 )
 
-[sub_resource type="GDScript" id=14]
-script/source = "extends Button
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.0313726, 0, 0.603922, 1 )
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-"
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.054902, 0, 1, 1 )
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 1, 0, 0, 1 )
@@ -67,25 +33,6 @@ bg_color = Color( 0.486275, 0, 0, 1 )
 [sub_resource type="StyleBoxFlat" id=9]
 bg_color = Color( 1, 0, 0, 1 )
 
-[sub_resource type="GDScript" id=15]
-script/source = "extends Button
-
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-"
-
 [sub_resource type="StyleBoxFlat" id=10]
 bg_color = Color( 1, 0.960784, 0, 1 )
 
@@ -94,25 +41,6 @@ bg_color = Color( 0.592157, 0.568627, 0, 1 )
 
 [sub_resource type="StyleBoxFlat" id=12]
 bg_color = Color( 1, 0.960784, 0, 1 )
-
-[sub_resource type="GDScript" id=16]
-script/source = "extends Button
-
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-"
 
 [node name="World" type="Node2D"]
 script = ExtResource( 1 )
@@ -123,28 +51,28 @@ margin_top = 72.0
 margin_right = 507.0
 margin_bottom = 249.0
 rect_pivot_offset = Vector2( 307, 167 )
-custom_styles/hover = SubResource( 5 )
-custom_styles/pressed = SubResource( 6 )
-custom_styles/normal = SubResource( 2 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-script = SubResource( 13 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Blue" type="Button" parent="."]
-margin_left = 512.0
+margin_left = 513.0
 margin_top = 72.0
-margin_right = 731.0
+margin_right = 732.0
 margin_bottom = 249.0
 rect_pivot_offset = Vector2( 307, 167 )
-custom_styles/hover = SubResource( 3 )
-custom_styles/pressed = SubResource( 1 )
-custom_styles/normal = SubResource( 4 )
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-script = SubResource( 14 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -160,7 +88,7 @@ custom_styles/pressed = SubResource( 8 )
 custom_styles/normal = SubResource( 9 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-script = SubResource( 15 )
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -176,7 +104,7 @@ custom_styles/pressed = SubResource( 11 )
 custom_styles/normal = SubResource( 12 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-script = SubResource( 16 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
