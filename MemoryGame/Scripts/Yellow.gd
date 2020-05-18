@@ -3,5 +3,5 @@ extends Button
 signal _yellow
 
 func _pressed():
-	emit_signal("_yellow")
+	emit_signal("_yellow", 3)
 

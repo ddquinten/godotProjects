@@ -1,10 +1,14 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Scripts/World.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/Blue.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Yellow.gd" type="Script" id=3]
 [ext_resource path="res://Scripts/Green.gd" type="Script" id=4]
 [ext_resource path="res://Scripts/Red.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/LastInput.gd" type="Script" id=6]
+[ext_resource path="res://Scripts/GoButton.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/SeqLength.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/Wait.gd" type="Script" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 1, 0.207843, 1 )
@@ -62,9 +66,9 @@ __meta__ = {
 }
 
 [node name="Blue" type="Button" parent="."]
-margin_left = 513.0
+margin_left = 512.0
 margin_top = 72.0
-margin_right = 732.0
+margin_right = 731.0
 margin_bottom = 249.0
 rect_pivot_offset = Vector2( 307, 167 )
 custom_styles/hover = SubResource( 4 )
@@ -105,6 +109,90 @@ custom_styles/normal = SubResource( 12 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Last Input" type="Label" parent="."]
+visible = false
+margin_left = 453.0
+margin_top = 489.0
+margin_right = 527.0
+margin_bottom = 520.0
+text = "Last Input:
+"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Input" type="Label" parent="Last Input"]
+margin_left = 74.0
+margin_top = -1.0
+margin_right = 149.0
+margin_bottom = 15.0
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Wait" type="Label" parent="."]
+visible = false
+margin_left = 469.0
+margin_top = 489.0
+margin_right = 568.0
+margin_bottom = 520.0
+text = "Watch Carefully"
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonDelay" type="Timer" parent="."]
+
+[node name="GoButton" type="Button" parent="."]
+visible = false
+margin_left = 455.0
+margin_top = 457.0
+margin_right = 569.0
+margin_bottom = 503.0
+rect_pivot_offset = Vector2( 307, 167 )
+text = "Start Round"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SeqLength" type="Label" parent="."]
+visible = false
+margin_left = 421.0
+margin_top = 523.0
+margin_right = 534.0
+margin_bottom = 554.0
+text = "Sequence Length:
+"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Length" type="Label" parent="SeqLength"]
+margin_left = 119.0
+margin_right = 194.0
+margin_bottom = 16.0
+text = "NULL"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GameOver" type="Label" parent="."]
+visible = false
+margin_left = 470.0
+margin_top = 546.0
+margin_right = 583.0
+margin_bottom = 577.0
+text = "Game Over!"
 __meta__ = {
 "_edit_use_anchors_": false
 }
